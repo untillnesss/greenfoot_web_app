@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Load file or HTML string example</title>
+    <style>
+        body,
+        html {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        iframe {
+            border: 0;
+            overflow: hidden;
+            z-index: 2;
+            display: block;
+            margin: auto;
+        }
+
+        iframe:focus {
+            background: yellow;
+            border: 3px solid red;
+        }
+
+
+        .full {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .glow {
+            z-index: 1;
+            position: absolute;
+            height: 770px;
+            width: 800px;
+            /* border-radius: 50%; */
+            box-shadow:
+                inset 0 0 50px #fff,
+                /* inner white */
+                inset 20px 0 80px #f0f,
+                /* inner left magenta short */
+                inset -20px 0 80px #0ff,
+                /* inner right cyan short */
+                inset 20px 0 300px #f0f,
+                /* inner left magenta broad */
+                inset -20px 0 300px #0ff,
+                /* inner right cyan broad */
+                0 0 50px #fff,
+                /* outer white */
+                -10px 0 80px #f0f,
+                /* outer left magenta */
+                10px 0 80px #0ff;
+            /* outer right cyan */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full">
+        <div style="z-index: 2;">
+            <iframe src="https://greenfoot.org/scenarios/32203?embed=true" allow="autoplay" width="800" height="825"
+                scrolling="no"></iframe>
+        </div>
+        <div class="glow"></div>
+    </div>
+
+</body>
+
+</html>
